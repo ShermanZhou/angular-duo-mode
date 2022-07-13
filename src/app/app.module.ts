@@ -3,14 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { CalculationService} from '../services/calculation.service';
+import { MyLibComponent } from '../my-lib-component.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MyLibComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [CalculationService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports:[
+    MyLibComponent
+  ]
 })
 export class AppModule { }
